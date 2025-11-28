@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link href="index.css" rel="stylesheet">
+  <style>
+
+    
+
+    .faculty-section ,.aboutfest ,.aboutdep{
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #0d48a16e, #1976d2ae); /* Blue gradient */
+      margin: 10px;
+    }
+
+    .faculty-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .faculty-section p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: #dbe6f6;
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .faculty-card {
+      background: linear-gradient(135deg, #2196f3, #0d47a1); /* Blue gradient for cards */
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .faculty-card h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .faculty-card p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #cfd8dc;
+    }
+  
+
+
+    
+    
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div id="logo">
+      <img src="logo.png" alt="logo">
+      <div id="afterlogo"><h1>Inventrix</h1></div>
+    </div>
+     <nav id="navbar">
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.php">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="registration.php">registration</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <!-- Right controls wrapper -->
+    <div class="right-controls">
+      <button id="login" ><a href="login.php">Log in</a> </button>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+
+
+  </header>  
+  <main>
+<div class="pagename"><h2 > About Us</h2> </div>
+<div class="aboutfest">
+  <h2>Inventrix</h2>
+  <div id="fest">
+    <img src="logo.png" height="300px" width="350px">
+  <p>
+    Inventrix is the ultimate celebration of innovation and imagination at the IT Department of K.E.T.S V.G. Vaze College. It’s where bright minds come together to turn ideas into reality, compete in electrifying events, and explore the latest in technology. Bursting with creativity, energy, and collaboration, Inventrix is more than a fest—it’s an experience that inspires, challenges, and ignites the passion of every student.
+  </p>
+  </div>
+</div>
+<div class="aboutdep">
+  <h2>IT Department </h2>
+  <p>
+   The IT Department at K.E.T.S V.G. Vaze College is a hub of innovation and creativity, where curious minds explore the limitless possibilities of technology. With a perfect blend of learning, experimentation, and collaboration, the department empowers students to push boundaries, solve real-world challenges, and turn bold ideas into groundbreaking solutions. It’s more than a department—it’s a launchpad for the tech leaders of tomorrow.  </p>
+</div>
+<section class="faculty-section">
+    <h2>Faculty</h2>
+    <p>The Faculty of the IT Department inspires innovation and nurtures curiosity, guiding students to transform ideas into cutting-edge technology with wisdom and dedication.</p>
+    
+    <div class="faculty-grid">
+      <div class="faculty-card">
+        <h3>Pournima Bhangale</h3>
+        <p>HOD of IT</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Rakhi Rane</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Vandana Kadam</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Mohini Bhole</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Nanda Rupnar</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="faculty-card">
+        <h3>Pranali Chavan</h3>
+        <p>Assistant Professor</p>
+      </div>
+    </div>
+  </section>  
+</main>
+
+ <script src="index.js"></script>
+</body>
+</html>

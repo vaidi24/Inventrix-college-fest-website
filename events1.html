@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+      <header class="topbar">
+    <div id="logo">
+      <img src="logo.png" alt="logo">
+      <div id="afterlogo"><h1>Inventrix</h1></div>
+    </div>
+     <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="registration.html">registration</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <!-- Right controls wrapper -->
+    <div class="right-controls">
+      <button id="login">Log In</button>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </header>
+<main>
+  <h1 style="text-align:center;">Our Events</h1>
+
+  <div class="event-section">
+    <h2>Day 1 Events</h2>
+    <div class="event-container" id="day1events"></div>
+  </div>
+
+  <div class="event-section">
+    <h2>Day 2 Events</h2>
+    <div class="event-container" id="day2events"></div>
+  </div>
+
+  <script>
+    function loadEvents() {
+      let events = JSON.parse(localStorage.getItem("events")) || [];
+
+      let day1Container = document.getElementById("day1events");
+      let day2Container = document.getElementById("day2events");
+
+      day1Container.innerHTML = "";
+      day2Container.innerHTML = "";
+
+      events.forEach(ev => {
+        let card = document.createElement("div");
+        card.classList.add("event-card");
+        card.innerHTML = `
+          <h3>${ev.name}</h3>
+          <p><b>Date:</b> ${ev.date} | <b>Time:</b> ${ev.time}</p>
+          <p><b>Venue:</b> ${ev.venue}</p>
+          <p class="price"><b>Price:</b> ₹${ev.price}</p>
+          <p><b>Capacity:</b> ${ev.capacity}</p>
+          <p><b>About:</b> ${ev.rules}</p>
+        `;
+
+        if (ev.category === "day1") {
+          day1Container.appendChild(card);
+        } else if (ev.category === "day2") {
+          day2Container.appendChild(card);
+        }
+      });
+    }
+
+    window.onload = loadEvents;
+  </script>
+  <script src="index.js"></script>
+  </main>
+</body>
+</html>

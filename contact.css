@@ -1,0 +1,69 @@
+.section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+.section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+.contact-details {
+       display: flex;
+      justify-content: space-around;
+       margin: 50px 0;
+       gap: 20px;
+       flex-wrap: wrap;
+      text-align: center;
+      
+    }
+
+     @keyframes slideUp {
+      from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-box {
+  background: linear-gradient(to bottom right, #0012347c, #1377db69);
+  color: white;
+  padding: 20px;
+  
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  min-width: 250px;
+  height: 200px;
+  text-align: center;
+   transform: translateY(50px);
+      animation: slideUp 2s ease-out forwards;
+
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+    /* map 
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+ 
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  
+} */
